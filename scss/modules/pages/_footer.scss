@@ -1,0 +1,21 @@
+@use "../abstracts/mixin" as m;
+@use "../abstracts/colors" as color;
+@use "../layout/container" as ctr;
+
+#footer{
+  background: map-get(color.$main,"warning", "300");
+  width: 100%;
+  margin-top: 2rem;
+  
+  &_container{
+    text-align: end;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+    background: map-get(color.$main,"warning", "300");
+    @include ctr.container_lg();
+    color: map-get(color.$base, "lighten","100");
+    line-height: 32px;
+  }
+}
